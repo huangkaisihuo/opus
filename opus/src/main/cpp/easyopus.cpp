@@ -58,7 +58,7 @@ Java_com_theeasiestway_opus_Opus_encoderSetComplexity(JNIEnv *env, jobject thiz,
 
 extern "C"
 JNIEXPORT jbyteArray JNICALL
-Java_com_theeasiestway_opus_Opus_encode___3BI(JNIEnv *env, jobject thiz, jlong handle, jbyteArray bytes, jint frame_size) {
+Java_com_theeasiestway_opus_Opus_encode__J_3BI(JNIEnv *env, jobject thiz, jlong handle, jbyteArray bytes, jint frame_size) {
     if (handle == 0) return nullptr;
     CodecOpus* codecInstance = reinterpret_cast<CodecOpus*>(handle);
     
@@ -76,7 +76,7 @@ Java_com_theeasiestway_opus_Opus_encode___3BI(JNIEnv *env, jobject thiz, jlong h
 
 extern "C"
 JNIEXPORT jshortArray JNICALL
-Java_com_theeasiestway_opus_Opus_encode___3SI(JNIEnv *env, jobject thiz, jlong handle, jshortArray shorts, jint frame_size) {
+Java_com_theeasiestway_opus_Opus_encode__J_3SI(JNIEnv *env, jobject thiz, jlong handle, jshortArray shorts, jint frame_size) {
     if (handle == 0) return nullptr;
     CodecOpus* codecInstance = reinterpret_cast<CodecOpus*>(handle);
     
